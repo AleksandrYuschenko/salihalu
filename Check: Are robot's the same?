@@ -1,0 +1,18 @@
+const compareRobots = (robot1, robot2) => {
+  // write code here
+  let x = '';
+  let y = '';
+
+  delete robot1.serialNo;
+  delete robot2.serialNo;
+
+  for (const key in robot1) {
+    x += key + robot1[key];
+  }
+
+  for (const key in robot2) {
+    y += key + robot2[key];
+  }
+
+  return x === y;
+};
